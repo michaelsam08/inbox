@@ -12,9 +12,9 @@ import {
 } from "react-admin";
 import CardActions from "@material-ui/core/CardActions";
 
-export const PostList = props => (
+const PostList = props => (
   <List {...props} title="Inbox">
-    <Datagrid rowClick="show" rowStyle={postRowStyle}>
+    <Datagrid>
       <PostQuickPreviewButton />
       <TextField label="#" source="id" />
       <TextField label="From:" source="title" />
@@ -22,6 +22,8 @@ export const PostList = props => (
     </Datagrid>
   </List>
 );
+
+export default PostList;
 
 const postRowStyle = (record, index) => ({
   backgroundColor: record.nb_views >= 500 ? "#efe" : "white"

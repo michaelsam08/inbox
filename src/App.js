@@ -3,7 +3,7 @@ import "./App.css";
 import { Admin, Resource } from "react-admin";
 import jsonServerProvider from "ra-data-json-server";
 import PostPreviewView from "./components/drawer";
-import { PostList, PostShow } from "./components/posts";
+import PostList from "./components/posts";
 
 const App = () => (
   <Admin
